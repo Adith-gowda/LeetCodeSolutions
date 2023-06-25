@@ -1,14 +1,14 @@
 class Solution:
     def appendCharacters(self, s: str, t: str) -> int:
-        if t in s:
-            return 0
-        if len(t)==0:
-            return 0
-        if len(t)==1:
-            if t not in s:
-                return 1
-            else:
-                return 0
+        # if t in s:
+        #     return 0
+        # if len(t)==0:
+        #     return 0
+        # if len(t)==1:
+        #     if t not in s:
+        #         return 1
+        #     else:
+        #         return 0
         n=len(t)
         m=len(s)
         k=0
