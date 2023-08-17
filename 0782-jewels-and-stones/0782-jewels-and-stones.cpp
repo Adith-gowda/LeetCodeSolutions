@@ -9,7 +9,7 @@ public:
         for(int i=0;i<jewels.size();i++){
             sum = sum + mp[jewels[i]];
         }
-        cout<<sum;
+        // cout<<sum;
         return sum;
     }
 };
