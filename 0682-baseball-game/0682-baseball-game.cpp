@@ -9,8 +9,6 @@ public:
                 a = st.top();
                 st.pop();
                 b = st.top();
-                st.pop();
-                st.push(b);
                 st.push(a);
                 st.push(a+b);
             }else if(operations[i] == "D"){
