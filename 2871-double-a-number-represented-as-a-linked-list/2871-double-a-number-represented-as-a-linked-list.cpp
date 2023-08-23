@@ -10,18 +10,6 @@
  */
 class Solution {
 public:
-    void insertAtTail(ListNode* &head1,int val){
-        ListNode* n = new ListNode(val); // (object Instantiation) 
-        if(head1==NULL){
-            head1=n;
-            return;
-        }
-        ListNode* temp=head1;
-        while(temp->next!=NULL){
-            temp=temp->next;
-        }
-        temp->next=n;
-    }
     void reverse(ListNode* &head){
         ListNode* current = head;
         ListNode *prev = NULL, *next = NULL;
@@ -37,21 +25,24 @@ public:
         reverse(head);
         int carry = 0;
         ListNode* temp = head;
-        ListNode* res = NULL;
+        ListNode* res = temp;
+        ListNode* prev = NULL;
         while(temp!=NULL){
+            prev = temp;
             int sum = (temp->val*2) + carry;
             if(sum>=10){
-                insertAtTail(res,sum%10);
+                temp->val = sum%10;
                 carry = 1;
             }
             else{
-                insertAtTail(res,sum);
+                temp->val = sum;
                 carry = 0;
             }
             temp = temp->next;
         }
         if(carry){
-            insertAtTail(res,1);
+            ListNode* n = new ListNode(1);
+            prev->next = n;
         }
         reverse(res);
         return res;
