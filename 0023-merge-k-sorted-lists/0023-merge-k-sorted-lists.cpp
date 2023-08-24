@@ -51,7 +51,7 @@ public:
         return head;
     }
     ListNode* mergeKLists(vector<ListNode*>& lists) {
-        // ListNode* head;
+
         if(lists.size()==0){
             return NULL;
         }
