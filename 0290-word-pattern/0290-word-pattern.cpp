@@ -22,7 +22,6 @@ public:
             }
             res = res + mp[pattern[i]] + " ";
         }
-        cout<<res;
         if(res==s){
             return true;
         }
