@@ -22,9 +22,6 @@ public:
             }
             res = res + mp[pattern[i]] + " ";
         }
-        // for(auto p : mp){
-        //     cout<<p.first<<" "<<p.second<<endl;
-        // }
         cout<<res;
         if(res==s){
             return true;
