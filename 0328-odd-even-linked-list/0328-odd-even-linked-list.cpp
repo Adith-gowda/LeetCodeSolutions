@@ -32,11 +32,11 @@ public:
             }
             even->next = odd->next;
             even = odd->next;
-            if(even->next==NULL || odd->next==NULL){
-                even->next=NULL;
-                odd->next=NULL;
-                break;
-            }
+            // if(even->next==NULL || odd->next==NULL){
+            //     even->next=NULL;
+            //     odd->next=NULL;
+            //     break;
+            // }
         }
         odd->next=temp;
         return head;
