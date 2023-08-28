@@ -1,5 +1,4 @@
 class MinStack {
-    
 public:
     map<int,int> mp;
     map<int,int>::iterator iter;
@@ -23,11 +22,9 @@ public:
                 mp.erase( iter );
         }
     }
-    
     int top() {
         return q.back();
     }
-    
     int getMin() {
         return mp.begin()->first;
     }
