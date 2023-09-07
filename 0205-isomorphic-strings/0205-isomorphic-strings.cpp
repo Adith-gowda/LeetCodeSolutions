@@ -13,7 +13,10 @@ public:
             else{
                 mp[s[i]]=t[i];
             }
+            if(st.size()!=mp.size()){
+                return false;
+            }
         }
-        return st.size()==mp.size();
+        return true;
     }
 };
