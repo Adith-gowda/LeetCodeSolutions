@@ -34,7 +34,6 @@ public:
             second = second->next;
         }
         first->next=NULL;
-        // cout<<first->val<<" "<<second->val;
 
         ListNode* prev = NULL;
         ListNode* succ = NULL;
@@ -47,11 +46,6 @@ public:
         }
 
         second = prev;
-
-        // while(second!=NULL){
-        //     cout<<second->val<<" ";
-        //     second=second->next;
-        // }
         temp = head;
         succ=NULL;
         prev=NULL;
