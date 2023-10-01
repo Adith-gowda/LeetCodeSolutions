@@ -30,12 +30,12 @@
 class Solution {
 public:
     string reverseWords(string s) {
-        std::istringstream iss(s);
-        std::string word;
-        std::string result;
+        istringstream iss(s);
+        string word;
+        string result;
 
         while(iss >> word){
-            std::reverse(word.begin(),word.end());
+            reverse(word.begin(),word.end());
             result += " " + word;
             word.clear();
         }
