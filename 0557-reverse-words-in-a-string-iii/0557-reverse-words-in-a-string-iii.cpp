@@ -30,26 +30,15 @@
 class Solution {
 public:
     string reverseWords(string s) {
-        string ans = "";
-        int start=0;
-        for(int i =0; i<s.length(); i++){
-            if(s[i] == ' '){
-                int temp = i-1;
-                while(temp >= start){
-                    ans += s[temp];
-                    temp--;
-                }
-                ans += ' ';
-                start = i+1;
-            }
-            
+        std::istringstream iss(s);
+        std::string word;
+        std::string result;
+
+        while(iss >> word){
+            std::reverse(word.begin(),word.end());
+            result += " " + word;
+            word.clear();
         }
-        int temp = s.length()-1;
-        while(temp >= start){
-                    ans += s[temp];
-                    temp--;
-                }
-        return ans;
-        
+        return result.substr(1 , result.size());
     }
 };
